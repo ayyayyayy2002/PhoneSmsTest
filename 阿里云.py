@@ -64,7 +64,7 @@ script_name = os.path.basename(__file__)
 output = f"{script_name}: {response.text}\n"
 
 # 将内容追加到 response.txt 文件中
-with open('response.txt', 'a', encoding='utf-8') as file:
+with open('AAA.txt', 'a', encoding='utf-8') as file:
     file.write(output)
 
-print("内容已写入 response.txt")
+print("内容已写入 AAA.txt")

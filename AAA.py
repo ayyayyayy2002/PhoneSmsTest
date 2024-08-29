@@ -3,6 +3,9 @@ import time
 import subprocess
 import sys
 
+if os.path.exists('AAA.txt'):
+        os.remove('AAA.txt')
+
 # 设置间隔时间 (毫秒)
 t = 100  # 修改这个值以控制脚本之间的间隔时间
 
@@ -29,10 +32,10 @@ if os.name == 'nt':
 else:
     activate_script = os.path.join(venv_path, 'bin', 'activate_this.py')
 
+
 # 在当前环境中执行激活脚本
 exec(open(activate_script).read(), dict(__file__=activate_script))
-if os.path.exists('response.txt'):
-        os.remove('response.txt')
+
 # 使用虚拟环境在死循环中运行子脚本
 try:
     while True:  # 死循环
@@ -40,5 +43,7 @@ try:
             print(f"正在运行脚本: {script}，并传递参数 phone: {phone}")
             subprocess.Popen([sys.executable, script, phone])  # 启动脚本，并传递参数
             time.sleep(t / 1000)  # 等待 t 毫秒
+        if os.path.exists('AAA.txt'):
+            os.remove('AAA.txt')
 except KeyboardInterrupt:
     print("停止运行所有脚本...")
