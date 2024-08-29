@@ -7,7 +7,6 @@ phone = sys.argv[1]
 print(f"接收到的参数 phone: {phone}")
 
 cookies = {
-    'XSRF-TOKEN': '6e634e4f-bc11-428c-a3c3-cdfeb74d4045',
     'cna': 'l91WHzz+HFQCAdoEKBrrszsf',
     'yunpk': '1306222260163933',
     'sca': '0d94489b',

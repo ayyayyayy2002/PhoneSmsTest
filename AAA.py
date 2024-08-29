@@ -24,7 +24,7 @@ for script in scripts:
     print(script)
 
 # 指定已有虚拟环境的路径
-venv_path = './.venv'  # 根据实际情况修改路径
+venv_path = './venv'  # 根据实际情况修改路径
 
 # 激活虚拟环境
 if os.name == 'nt':
